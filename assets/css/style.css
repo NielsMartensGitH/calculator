@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calc-box {
+    height: 100vh;
+    background-color: black;
+}
+
+.calculator {
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 30%;
+    height: 90%;
+}
+
+.display {
+    text-align: end;
+}
