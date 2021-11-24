@@ -11,8 +11,8 @@
 <body>
     <section class="calc-box">
         <div class="calculator d-flex flex-column justify-content-center">
-            <div id="display" class="display bg-dark text-light p-3 text-end">DISPLAY HERE</div>
-            <div class="result bg-dark text-light p-3 text-end">Here comes result</div>
+            <div id="display" class="display bg-dark text-light p-3 text-end">0</div>
+            <div id="result" class="result bg-dark text-light p-3 text-end"></div>
             <div class="interface bg-warning p-2">
                 <div class="container">
                     <div class="row text-center">
@@ -37,7 +37,7 @@
                         <div onclick="buttonClick(0)" class="col btn btn-danger border border-dark p-3">0</div>
                         <div onclick="buttonClick('.')" class="col btn btn-danger border border-dark p-3">.</div>
                         <div onclick="buttonClick('-')" class="col btn btn-danger border border-dark p-3">-</div>
-                        <div onclick="buttonClick('=')" class="col btn btn-danger border border-dark p-3">=</div>
+                        <div onclick="calculate()" class="col btn btn-danger border border-dark p-3">=</div>
                     </div>
                 </div>
             </div>
