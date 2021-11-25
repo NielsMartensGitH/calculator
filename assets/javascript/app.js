@@ -43,6 +43,8 @@ window.addEventListener("keydown", checkKeyPressed, false);
 function checkKeyPressed(evt) {
     if (evt.keyCode == "97") {
         buttonClick(1);
+    } else if (evt.keyCode == "96") {
+        buttonClick(0);
     } else if (evt.keyCode == "98") {
         buttonClick(2)
     } else if (evt.keyCode == "99") {
