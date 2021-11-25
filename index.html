@@ -10,7 +10,8 @@
 </head>
 <body>
     <section class="calc-box">
-        <div class="calculator d-flex flex-column justify-content-center">
+        <h1>Free Calculator</h1>
+        <div class="calculator d-flex flex-column">
             <div id="display" class="display bg-dark text-light pt-2 px-2 text-end">0</div>
             <div id="result" class="result bg-dark text-danger p-3 text-end"></div>
             <div class="interface bg-warning p-2">
@@ -39,13 +40,22 @@
                         <div onclick="buttonClick('/')" class="col btn btn-danger border border-dark p-3">/</div>
                         <div onclick="calculate()" class="col btn btn-danger border border-dark p-3">=</div>
                     </div>
-                    <div class="row text-center">
+                    <div class="row text-center bg-warning">
                         <div onclick="reset();" class="reset text-light col btn btn-secondary border border-dark p-3 m-3">RESET</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-light text-center p-3">
+                    Made By Niels Martens          
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="assets/javascript/app.js"></script>
 </body>
 </html>

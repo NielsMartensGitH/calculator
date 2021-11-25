@@ -22,7 +22,13 @@ function buttonClick(number) {
 }
 
 function calculate() {
-    document.getElementById("result").innerHTML = eval(display.innerHTML)
+    try {
+        document.getElementById("result").innerHTML = eval(display.innerHTML)
+    }
+    catch(error) {
+        document.getElementById("result").innerHTML = "Invalid input!";
+    }
+    
 }
 
 
@@ -67,9 +73,12 @@ function checkKeyPressed(evt) {
         calculate()
     } else if (evt.keyCode == "46") {
         reset();
+    } else if (evt.keyCode == "8" && display.innerHTML.length == 1) {
+        console.log("input already cleared!")
+        display.innerHTML = "0";
     } else if(evt.keyCode == "8" && display.innerHTML != "0") {
         display.innerHTML = display.innerHTML.slice(0, -1)
-    }
+    } 
     else {   
         console.log("invalid key pressed!")
     }

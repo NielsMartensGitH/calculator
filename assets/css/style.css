@@ -1,12 +1,17 @@
+* {
+    background-color: black;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.calc-box {
-    height: 100vh;
-    background-color: black;
+h1 {
+    text-align: center;
+    padding: 15px;
+    color: blanchedalmond;
 }
 
 .calculator {
@@ -19,7 +24,7 @@ body {
 
 .display {
     text-align: end;
-    min-height: 50px;
+    min-height: 60px;
     width: auto;
     word-wrap: break-word;
 }
