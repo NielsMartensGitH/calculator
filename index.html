@@ -11,10 +11,10 @@
 <body>
     <section class="calc-box">
         <div class="calculator d-flex flex-column justify-content-center">
-            <div id="display" class="display bg-dark text-light p-3 text-end">0</div>
-            <div id="result" class="result bg-dark text-light p-3 text-end"></div>
+            <div id="display" class="display bg-dark text-light pt-2 px-2 text-end">0</div>
+            <div id="result" class="result bg-dark text-danger p-3 text-end"></div>
             <div class="interface bg-warning p-2">
-                <div class="container">
+                <div class="button container">
                     <div class="row text-center">
                         <div onclick="buttonClick(7)" class="col btn btn-danger border border-dark p-3">7</div>
                         <div onclick="buttonClick(8)" class="col btn btn-danger border border-dark p-3">8</div>
@@ -36,8 +36,11 @@
                     <div class="row text-center">
                         <div onclick="buttonClick(0)" class="col btn btn-danger border border-dark p-3">0</div>
                         <div onclick="buttonClick('.')" class="col btn btn-danger border border-dark p-3">.</div>
-                        <div onclick="buttonClick('-')" class="col btn btn-danger border border-dark p-3">-</div>
+                        <div onclick="buttonClick('/')" class="col btn btn-danger border border-dark p-3">/</div>
                         <div onclick="calculate()" class="col btn btn-danger border border-dark p-3">=</div>
+                    </div>
+                    <div class="row text-center">
+                        <div onclick="reset();" class="reset text-light col btn btn-secondary border border-dark p-3 m-3">RESET</div>
                     </div>
                 </div>
             </div>
