@@ -30,3 +30,49 @@ function reset() {
     document.getElementById("display").innerHTML = "0";
     document.getElementById("result").innerHTML = "";
 }
+
+
+window.addEventListener("keydown", checkKeyPressed, false);
+
+function checkKeyPressed(evt) {
+    if (evt.keyCode == "97") {
+        buttonClick(1);
+    } else if (evt.keyCode == "98") {
+        buttonClick(2)
+    } else if (evt.keyCode == "99") {
+        buttonClick(3)
+    } else if (evt.keyCode == "100") {
+        buttonClick(4)
+    } else if (evt.keyCode == "101") {
+        buttonClick(5)
+    } else if (evt.keyCode == "102") {
+        buttonClick(6)
+    } else if (evt.keyCode == "103") {
+        buttonClick(7)
+    } else if (evt.keyCode == "104") {
+        buttonClick(8)
+    } else if (evt.keyCode == "105") {
+        buttonClick(9)
+    } else if (evt.keyCode == "107") {
+        buttonClick("+")
+    } else if (evt.keyCode == "109") {
+        buttonClick("-")
+    } else if (evt.keyCode == "106") {
+        buttonClick("*")
+    } else if (evt.keyCode == "111") {
+        buttonClick("/")
+    } else if (evt.keyCode == "110") {
+        buttonClick(".")
+    } else if (evt.keyCode == "13") {
+        calculate()
+    } else if (evt.keyCode == "46") {
+        reset();
+    } else if(evt.keyCode == "8" && display.innerHTML != "0") {
+        display.innerHTML = display.innerHTML.slice(0, -1)
+    }
+    else {   
+        console.log("invalid key pressed!")
+    }
+}
+
+
