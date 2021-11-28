@@ -1,4 +1,6 @@
-const display = document.getElementById('display')
+const display = document.getElementById('display');
+const result = document.getElementById('result');
+
 
 function buttonClick(number) {
     if (display.innerHTML == "0" && number != 0 && number != "." && number != "/" && number != "*" && number != "+") {
@@ -15,7 +17,9 @@ function buttonClick(number) {
         console.log("Cannot start with +")
     } else if (display.innerHTML == "-" && number == "-") {
         console.log("Can't use - two times!")
-    }
+    } else if (display.innerHTML.includes("=")) {
+        display.innerHTML = result.innerHTML + number; 
+    } 
     else {
         display.innerHTML += number;
     }
@@ -23,10 +27,11 @@ function buttonClick(number) {
 
 function calculate() {
     try {
-        document.getElementById("result").innerHTML = eval(display.innerHTML)
+        result.innerHTML = eval(display.innerHTML)
+        display.innerHTML += "="
     }
     catch(error) {
-        document.getElementById("result").innerHTML = "Invalid input!";
+        result.innerHTML = "Invalid input!";
     }
     
 }
