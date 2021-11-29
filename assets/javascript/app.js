@@ -19,8 +19,11 @@ function buttonClick(number) {
         console.log("Can't use - two times!")
     } else if (display.innerHTML.includes("=")) {
         display.innerHTML = result.innerHTML + number; 
-    } 
-    else {
+    } else if (display.innerHTML.endsWith("++") || display.innerHTML.endsWith("--") || display.innerHTML.endsWith("**") || display.innerHTML.endsWith("//") ) {
+        console.log("Cannot use double signs!");
+        display.innerHTML = display.innerHTML.slice(0, -1);
+        display.innerHTML += number;
+    } else {
         display.innerHTML += number;
     }
 }
@@ -84,7 +87,7 @@ function checkKeyPressed(evt) {
         console.log("input already cleared!")
         display.innerHTML = "0";
     } else if(evt.keyCode == "8" && display.innerHTML != "0") {
-        display.innerHTML = display.innerHTML.slice(0, -1)
+        display.innerHTML = display.innerHTML.slice(0, -1);
     } 
     else {   
         console.log("invalid key pressed!")
